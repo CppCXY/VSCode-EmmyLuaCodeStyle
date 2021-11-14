@@ -2,7 +2,12 @@
 	"name": "emmylua-codestyle",
 	"displayName": "EmmyLuaCodeStyle",
 	"description": "format and check lua code",
-	"keywords": ["lua","emmylua","format","codestyle"],
+	"keywords": [
+		"lua",
+		"emmylua",
+		"format",
+		"codestyle"
+	],
 	"version": "0.1.0",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
@@ -44,9 +49,12 @@
 		"eslint": "^8.1.0",
 		"glob": "^7.1.7",
 		"mocha": "^9.1.3",
-		"typescript": "^4.4.4"
+		"typescript": "^4.4.4",
+		"filecopy": "^4.0.2",
+		"download": "^8.0.0"
 	},
 	"dependencies": {
+
 		"vscode-languageclient": "^7.0.0"
 	}
 }
