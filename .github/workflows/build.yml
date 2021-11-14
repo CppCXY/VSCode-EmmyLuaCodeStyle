@@ -20,3 +20,8 @@ jobs:
         node ./build/prepare-version.js
         node ./build/prepare.js
         vsce package
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with: 
+        name: VSCode-EmmyLuaCodeStyle
+        path: ${{ github.workspace }}/emmylua-codestyle*.vsix
