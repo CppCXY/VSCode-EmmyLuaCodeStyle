@@ -27,7 +27,7 @@ async function build() {
     
     await decompress('temp/CodeFormat.zip', 'temp/server');
 
-    await fc('temp/server','server',  { mkdirp: true });
+    // await fc('temp/server','server',  { mkdirp: true });
     // // mac
     // await fc('temp/server/macOS/bin/CodeFormatServer', 'server/macOS/bin/CodeFormatServer', { mkdirp: true });
 
