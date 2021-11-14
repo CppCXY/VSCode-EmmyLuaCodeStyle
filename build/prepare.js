@@ -27,14 +27,15 @@ async function build() {
     
     await decompress('temp/CodeFormat.zip', 'temp/server');
 
-    // mac
-    await fc('temp/server/macOS/bin/CodeFormatServer', 'server/macOS/bin/CodeFormatServer', { mkdirp: true });
+    await fc('temp/server','server',  { mkdirp: true });
+    // // mac
+    // await fc('temp/server/macOS/bin/CodeFormatServer', 'server/macOS/bin/CodeFormatServer', { mkdirp: true });
 
-    // linux
-    await fc('temp/server/Linux/bin/CodeFormatServer', 'server/Linux/bin/CodeFormatServer', { mkdirp: true });
+    // // linux
+    // await fc('temp/server/Linux/bin/CodeFormatServer', 'server/Linux/bin/CodeFormatServer', { mkdirp: true });
 
-    // win
-    await fc('temp/server/Windows/bin/CodeFormatServer.exe', 'server/Linux/bin/CodeFormatServer.exe', { mkdirp: true });
+    // // win
+    // await fc('temp/server/Windows/bin/CodeFormatServer.exe', 'server/Linux/bin/CodeFormatServer.exe', { mkdirp: true });
 }
 
 build().catch(console.error);
