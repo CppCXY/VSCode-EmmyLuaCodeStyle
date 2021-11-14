@@ -17,6 +17,7 @@ jobs:
       run: |
         npm i
         npm i vsce -g
+        npm i downloadjs -g
         node ./build/prepare-version.js
         node ./build/prepare.js
         vsce package
