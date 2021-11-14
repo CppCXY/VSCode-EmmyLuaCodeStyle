@@ -8,3 +8,9 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
+temp
+tsconfig.json
+vsc-extension-quickstart.md
+tslint.json
+build.sh
+prepare-version.js
