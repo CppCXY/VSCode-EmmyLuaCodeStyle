@@ -19,7 +19,7 @@ jobs:
         npm i vsce -g
         node ./build/prepare-version.js
         node ./build/prepare.js
-        cp temp/server /server
+        cp -r temp/server /server
         vsce package
     - name: Upload
       uses: actions/upload-artifact@v2
