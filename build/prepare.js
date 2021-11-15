@@ -1,7 +1,6 @@
 const fs = require('fs');
 const download = require('download');
 const decompress = require('decompress')
-const fc = require('filecopy');
 const config = require('./config').default;
 
 async function downloadTo(url, path) {
