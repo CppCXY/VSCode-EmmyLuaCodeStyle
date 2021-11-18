@@ -13,7 +13,7 @@ EN: Supports the configuration of projects through the .editorconfig file, the .
 CN: 首先创建.edtorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
 
 EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
- 
+
 ## feature
 
 - [x] lua code format
@@ -25,4 +25,5 @@ EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the
 
 - [] name style check
 - [] check locale
+- [] English document
 - [] jetbrain IDE plugin
