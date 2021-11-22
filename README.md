@@ -23,7 +23,8 @@ EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the
 
 ## Road Map
 
-- [] name style check
-- [] check locale
-- [] English document
-- [] jetbrain IDE plugin
+- name style check
+- check locale
+- English document
+- jetbrain IDE plugin
+- support plugin
