@@ -6,7 +6,9 @@
 - [x] lua codestyle check
 - [x] support unicode character
 - [x] support rangeformatting
+- [x] format on paste
 - [x] support typeformatting
+- [x] format on type lineseperater
 
 ## 介绍(Introduce)
 
@@ -21,13 +23,14 @@ Based on this idea, I designed the lua formatting algorithm and realizes the plu
 ## 特别说明(Special note）
 
 CN: 
-1. 范围格式化(rangeformatting)在语言服务支持一般格式化的情况下不会触发，通常在粘贴代码时(需要设置Format On Paste)触发
-2. 键入字符格式化(typeformatting)在输入换行符时会格式化当前行，如果有语法错误就不会执行。
+1. 范围格式化(rangeformatting)的快捷键是ctrl+k+f，同时支持范围格式化后可以设置editor.formatOnPaste支持粘贴代码格式化。
+
+2. 键入字符格式化(typeformatting)仅支持键入换行符时触发，该特性开启需要设置editor.formatOnType。
 
 EN:
-1. Range formatting will not be triggered when the language service supports general formatting. It is usually triggered when pasting code (format on paste needs to be set)
+1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
-2. Type formatting will format the current line when entering a newline character. If there is a syntax error, it will not be executed.
+2. Type character formatting only supports triggering when typing line breaks, which require setting editor.formatOnType when turned on.
 
 
 ## 配置(Configure)
@@ -54,4 +57,5 @@ EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the
 ## 其他平台(Other Platform)
 
 CN:Jetbrain家的IDE由Intellij-EmmyLua(阿唐)实现，其他编辑器不受直接支持，语言服务可以跑在任何支持语言服务的编辑器中，需要自行尝试。
+
 EN:The ide of the jetbrain family is implemented by Intellij-EmmyLua(tangzx), and other editors are not directly supported. Language server can run in any editor that supports language services, and you need to try it yourself.
