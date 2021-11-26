@@ -7,9 +7,11 @@
 		"emmylua",
 		"format",
 		"codestyle",
-		"luaformat"
+		"luaformat",
+		"lua formatter",
+		"lua codestyle"
 	],
-	"version": "0.1.9",
+	"version": "0.1.11",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
