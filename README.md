@@ -1,7 +1,7 @@
 # EmmyLuaCodeStyle
 
 ## feature
-
+- [x] support lua5.1，lua5.2，lua5.3，lua5.4，luajit
 - [x] lua code format
 - [x] lua codestyle check
 - [x] support unicode character
