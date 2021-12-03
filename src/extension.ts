@@ -54,7 +54,8 @@ async function startServer() {
 		initializationOptions: {
 			workspaceFolders: vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.map(f => f.uri.toString()) : null,
 			client: 'vsc',
-			configFiles: configFiles
+			configFiles: configFiles,
+			localeRoot: path.join(saveContext.extensionPath, "locale").toString()
 		}
 	};
 

@@ -1,3 +1,4 @@
+import path = require('path');
 import * as vscode from 'vscode';
 
 export enum UpdateType {
@@ -33,10 +34,10 @@ export class EditorConfigWatcher implements vscode.Disposable {
         const configFiles: IEditorConfigSource[] = [];
         for (let i = 0; i < files.length; i++) {
             const fileUri = files[i];
-            const ws = await vscode.workspace.getWorkspaceFolder(fileUri);
+            const ws = path.dirname(fileUri.toString());
             if (ws) {
                 configFiles.push({
-                    workspace: ws.uri.toString(),
+                    workspace: ws,
                     uri: fileUri.toString(),
                     path: fileUri.fsPath
                 });

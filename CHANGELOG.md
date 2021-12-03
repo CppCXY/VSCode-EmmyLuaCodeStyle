@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "emmyluacodestyle" extension will be documented in this file.
+## 0.1.16
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+    代码诊断本地化
 
-## [Unreleased]
+## 0.1.15
 
-- Initial release
+    修复bug

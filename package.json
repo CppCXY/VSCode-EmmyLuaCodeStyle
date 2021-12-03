@@ -1,7 +1,7 @@
 {
 	"name": "emmylua-codestyle",
 	"displayName": "EmmyLuaCodeStyle",
-	"description": "format and check lua code",
+	"description": "format lua code and check lua code style",
 	"keywords": [
 		"lua",
 		"emmylua",
@@ -11,7 +11,7 @@
 		"lua formatter",
 		"lua codestyle"
 	],
-	"version": "0.1.14",
+	"version": "0.1.16",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
@@ -19,10 +19,13 @@
 	},
 	"repository": "https://github.com/CppCXY/EmmyLuaCodeStyle",
 	"categories": [
-		"Programming Languages"
+		"Programming Languages",
+		"Formatters",
+		"Linters"
 	],
 	"activationEvents": [
-		"onLanguage:lua"
+		"onLanguage:lua",
+		"onCommand:emmyluacodestyle.insertEditorConfig"
 	],
 	"main": "./out/extension.js",
 	"contributes": {

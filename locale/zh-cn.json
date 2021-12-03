@@ -1,0 +1,8 @@
+{
+    "incorrect indentation {}, here need {} indent":"不正确的缩进{}，这里需要{}个缩进",
+    "'=' should align to character {}":"'='号应该对齐到第{}个字符",
+    "The line width should not exceed {}":"行宽不应该超过{}个字符",
+    "here need keep {} space":"这里需要保持{}个空白",
+    "here need keep {} line":"这里需要空{}行",
+    "here need at least {} line":"这里需要空至少{}行"
+}
