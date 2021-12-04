@@ -11,7 +11,7 @@
 		"lua formatter",
 		"lua codestyle"
 	],
-	"version": "0.1.17",
+	"version": "0.1.18",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
