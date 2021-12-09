@@ -1,8 +1,12 @@
 {
-    "incorrect indentation {}, here need {} indent":"不正确的缩进{}，这里需要{}个缩进",
-    "'=' should align to character {}":"'='号应该对齐到第{}个字符",
-    "The line width should not exceed {}":"行宽不应该超过{}个字符",
-    "here need keep {} space":"这里需要保持{}个空白",
-    "here need keep {} line":"这里需要空{}行",
-    "here need at least {} line":"这里需要空至少{}行"
+    "incorrect indentation {}, here need {} indent": "不正确的缩进{}，这里需要{}个缩进",
+    "'=' should align to character {}": "'='号应该对齐到第{}个字符",
+    "The line width should not exceed {}": "行宽不应该超过{}个字符",
+    "here need keep {} space": "这里需要保持{}个空白",
+    "here need keep {} line": "这里需要空{}行",
+    "here need at least {} line": "这里需要空至少{}行",
+    "The code must end with a new line": "代码必须以新行结束",
+    "local name define does not match {} name style": "local 名称定义不匹配{}命名风格",
+    "function name define does not match {} name style": "函数名称定义不符合{}命名风格",
+    "table field name define does not match {} name style": "table field名称不符合{}命名风格"
 }

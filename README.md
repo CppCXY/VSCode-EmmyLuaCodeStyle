@@ -4,6 +4,7 @@
 - [x] support lua5.1，lua5.2，lua5.3，lua5.4，luajit
 - [x] lua code format
 - [x] lua codestyle check
+- [x] lua name style check
 - [x] support unicode character
 - [x] support rangeformatting
 - [x] format on paste
@@ -46,10 +47,9 @@ EN: Supports the configuration of projects through the .editorconfig file, the .
 CN: 首先创建.edtorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
 
 EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
+
 ## Road Map
 
-- name style check
-- check locale
 - English document
 - support plugin
 
