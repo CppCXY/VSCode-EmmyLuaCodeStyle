@@ -3,7 +3,7 @@
 ## feature
 - [x] support lua5.1，lua5.2，lua5.3，lua5.4，luajit
 - [x] lua code format
-- [x] lua codestyle check
+- [x] lua code style check
 - [x] lua name style check
 - [x] support unicode character
 - [x] support rangeformatting
@@ -28,11 +28,13 @@ CN:
 
 2. 键入字符格式化(typeformatting)仅支持键入换行符时触发，该特性开启需要设置editor.formatOnType。
 
+3. 命名风格检查默认不开启
 EN:
 1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
 2. Type character formatting only supports triggering when typing line breaks, which require setting editor.formatOnType when turned on.
 
+3. Naming style checking is not turned on by default
 
 ## 配置(Configure)
 
