@@ -96,7 +96,7 @@ async function startServer() {
 					'server',
 					'Linux',
 					'bin',
-					'CodeFormatServer.exe'
+					'CodeFormatServer'
 				)
 				fs.chmodSync(command, '777');
 				break;
@@ -106,7 +106,7 @@ async function startServer() {
 					'server',
 					'macOS',
 					'bin',
-					'CodeFormatServer.exe'
+					'CodeFormatServer'
 				)
 				fs.chmodSync(command, '777');
 				break;
