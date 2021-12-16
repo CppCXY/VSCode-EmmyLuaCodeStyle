@@ -10,6 +10,8 @@
 - [x] format on paste
 - [x] support typeformatting
 - [x] format on type lineseperater
+- [x] English document
+- [x] fast and low memory 
 
 ## 介绍(Introduce)
 
@@ -52,7 +54,7 @@ EN: First create a .edtorconfig file and then enter Ctrl + shift + p to open the
 
 ## Road Map
 
-- English document
+- auto import
 - support plugin
 
 
