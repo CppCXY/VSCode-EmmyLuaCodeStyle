@@ -40,9 +40,9 @@ EN:
 
 ###  如何配置(How to configure)
 
-CN: 支持通过.editorconfig文件配置项目，.editorconfig文件必须处于项目根目录，如果希望同一项目下不同目录采用不同的配置，那么不同的目录下可以分别添加.editorconfig文件。
+CN: 支持通过.editorconfig文件配置项目，.editorconfig文件必须处于项目根目录，如果希望同一项目下不同目录采用不同的配置，那么不同的目录下可以分别添加.editorconfig文件。或者如果希望当前目录下不同文件采用不同配置，可以按editorconfig支持的方式去配置不同文件，配置的文档可以参考 https://github.com/CppCXY/EmmyLuaCodeStyle
 
-EN: Supports the configuration of projects through the .editorconfig file, the .editorconfig file must be at the root of the project, and if you want different configurations for different directories under the same project, you can add .editorconfig files separately under different directories.
+EN: Supports project configuration through the .editorconfig file. The .editorconfig file must be in the project root directory. If you want different directories under the same project to use different configurations, you can add .editorconfig files to different directories. Or if you want different files in the current directory to use different configurations, you can configure different files according to the way supported by editorconfig. For configuration documents, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle 
 
 ### 创建模板配置(Create a template configuration)
 
