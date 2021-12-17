@@ -3,9 +3,9 @@ name: Node CI
 on: 
   push:
     branches:
-      - "**"
+      - master
     tags:
-      - "v*"
+      - "v*.*.*"
 
 jobs:
   build:
@@ -13,21 +13,21 @@ jobs:
       matrix:
         include:
          - os: windows-latest
-            platform: win32
-            arch: x64
-            npm_config_arch: x64
+           platform: win32
+           arch: x64
+           npm_config_arch: x64
          - os: ubuntu-latest
-            platform: linux
-            arch: x64
-            npm_config_arch: x64
+           platform: linux
+           arch: x64
+           npm_config_arch: x64
          - os: macos-latest
-            platform: darwin
-            arch: x64
-            npm_config_arch: x64
+           platform: darwin
+           arch: x64
+           npm_config_arch: x64
          - os: macos-latest
-            platform: darwin
-            arch: arm64
-            npm_config_arch: arm64
+           platform: darwin
+           arch: arm64
+           npm_config_arch: arm64
 
     runs-on: ${{ matrix.os }}
 
@@ -56,12 +56,3 @@ jobs:
         name: ${{ env.target }}
         path: ${{ github.workspace }}/emmylua-codestyle*.vsix
   
-  # publish:
-  #   run-on: ubuntu-latest
-  #   needs: build
-  #   if: success() && startsWith(github.ref, 'refs/tags/')
-  #   steps:
-  #    - uses: actions/download-artifact@v2
-  #    - run: npx vsce publish --packagePath $(find . -iname *.vsix)
-  #      env:
-  #       VSCE_PAT: ${{ secrets.VSCE_PAT }}
