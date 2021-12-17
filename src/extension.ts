@@ -63,7 +63,7 @@ async function startServer() {
 	if (DEBUG_MODE) {
 		// The server is a started as a separate app and listens on port 5008
 		const connectionInfo = {
-			port: 5008
+			port: 5008,
 		};
 		serverOptions = () => {
 			// Connect to language server via socket

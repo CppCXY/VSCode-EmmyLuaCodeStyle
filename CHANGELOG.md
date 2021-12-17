@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.2.4 
+
+    修复因为cin.readsome无法在linux和macosx上正确工作导致无法正确运行的问题，windows上仍然使用cin,cout
+    linux和macosx上使用asio封装过的接口
+
 ## 0.2.2
 
     优化节点的内存占用，优化常驻内存，采用mimalloc优化内存分配性能，优化内存碎片。
