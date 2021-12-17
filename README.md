@@ -32,6 +32,8 @@ CN:
 2. 键入字符格式化(typeformatting)仅支持键入换行符时触发，该特性开启需要设置editor.formatOnType。
 
 3. 命名风格检查默认不开启
+
+
 EN:
 1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
