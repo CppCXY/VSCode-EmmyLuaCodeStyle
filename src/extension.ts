@@ -79,13 +79,14 @@ async function startServer() {
 		};
 	} else {
 		let platform: string = os.platform();
+
 		let command: string = "";
 		switch (platform) {
 			case "win32":
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'Windows',
+					'win32-x64',
 					'bin',
 					'CodeFormatServer.exe'
 				)
@@ -94,7 +95,7 @@ async function startServer() {
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'Linux',
+					'linux-x64',
 					'bin',
 					'CodeFormatServer'
 				)
@@ -104,7 +105,7 @@ async function startServer() {
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'macOS',
+					'darwin-x64',
 					'bin',
 					'CodeFormatServer'
 				)

@@ -2,6 +2,7 @@ const fs = require('fs');
 const download = require('download');
 const decompress = require('decompress')
 const config = require('./config').default;
+const args = process.argv
 
 async function downloadTo(url, path) {
     return new Promise((r, e) => {
@@ -13,7 +14,7 @@ async function downloadTo(url, path) {
 
 async function downloadDepends() {
     await Promise.all([        
-        downloadTo(`${config.lanServerUrl}/${config.lanServerVersion}/CodeFormat.zip`, 'temp/CodeFormat.zip'),
+        downloadTo(`${config.lanServerUrl}/${config.lanServerVersion}/CodeFormat/${args[1]}.zip`, 'temp/CodeFormat.zip'),
     ]);
 }
 

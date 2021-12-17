@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.5
+
+    修复一个连续调用函数时格式化错误的问题
+
 ## 0.2.4 
 
     修复因为cin.readsome无法在linux和macosx上正确工作导致无法正确运行的问题，windows上仍然使用cin,cout
