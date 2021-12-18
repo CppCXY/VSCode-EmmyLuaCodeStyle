@@ -45,7 +45,7 @@ jobs:
     - name: build
       run: |
         node ./build/prepare.js ${{ env.target }}
-        cp temp/server/${{ env.target }}/bin/CodeFormatServer* server/bin/
+        cp -r temp/server/${{ env.target }}/bin/CodeFormatServer* server/bin/
         npx vsce package --target ${{ env.target }}
     - name: Upload
       uses: actions/upload-artifact@v2
