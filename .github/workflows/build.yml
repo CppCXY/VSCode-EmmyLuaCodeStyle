@@ -5,7 +5,7 @@ on:
     branches:
       - master
     tags:
-      - "v*.*.*"
+      - "*.*.*"
 
 jobs:
   build:
@@ -42,11 +42,10 @@ jobs:
       env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        npm_config_arch: ${{ matrix.npm_config_arch }}
-    - shell: pwsh
-      run: echo "target=${{ matrix.platform }}-${{ matrix.arch }}" >> $env:GITHUB_ENV
+    - name: set env variable
+      run: echo "target=${{ matrix.platform }}-${{ matrix.arch }}" >> $GITHUB_ENV
     - name: build
       run: |
-        node ./build/prepare-version.js 
         node ./build/prepare.js ${{ env.target }}
         cp -r temp/server/bin/CodeForamtServer* server/bin/
         npx vsce package --target ${{ env.target }}
