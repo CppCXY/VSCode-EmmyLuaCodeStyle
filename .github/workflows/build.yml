@@ -35,8 +35,6 @@ jobs:
     - uses: actions/checkout@master
     - name: Use Node.js 14.x
       uses: actions/setup-node@v2
-      with:
-        version: 14.x
     - name: npm install
       run: npm i
       env:
@@ -47,7 +45,7 @@ jobs:
     - name: build
       run: |
         node ./build/prepare.js ${{ env.target }}
-        cp -r temp/server server
+        cp -r temp/server/${{ matrix.arch }} server
         npx vsce package --target ${{ env.target }}
     - name: Upload
       uses: actions/upload-artifact@v2

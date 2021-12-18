@@ -86,7 +86,6 @@ async function startServer() {
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'win32-x64',
 					'bin',
 					'CodeFormatServer.exe'
 				)
@@ -95,7 +94,6 @@ async function startServer() {
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'linux-x64',
 					'bin',
 					'CodeFormatServer'
 				)
@@ -105,7 +103,6 @@ async function startServer() {
 				command = path.join(
 					saveContext.extensionPath,
 					'server',
-					'darwin-x64',
 					'bin',
 					'CodeFormatServer'
 				)
