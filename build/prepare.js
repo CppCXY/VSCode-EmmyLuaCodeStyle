@@ -14,7 +14,7 @@ async function downloadTo(url, path) {
 
 async function downloadDepends() {
     await Promise.all([        
-        downloadTo(`${config.lanServerUrl}/${config.lanServerVersion}/${args[1]}.zip`, 'temp/CodeFormat.zip'),
+        downloadTo(`${config.lanServerUrl}/${config.lanServerVersion}/${args[2]}.zip`, 'temp/CodeFormat.zip'),
     ]);
 }
 
