@@ -12,7 +12,7 @@
 - [x] format on type lineseperater
 - [x] English document
 - [x] fast and low memory 
-- [x] sopport windows/linux/macosx
+- [x] support windows/linux/macosx/macosx m1
 
 ## 介绍(Introduce)
 
