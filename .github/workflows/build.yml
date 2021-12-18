@@ -45,7 +45,7 @@ jobs:
     - name: build
       run: |
         node ./build/prepare.js ${{ env.target }}
-        cp -r temp/server/${{ matrix.arch }} server
+        cp -r temp/server/${{ matrix.target }} server
         npx vsce package --target ${{ env.target }}
     - name: Upload
       uses: actions/upload-artifact@v2
