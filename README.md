@@ -16,23 +16,24 @@
 
 ## 介绍(Introduce)
 
-CN: 该项目是基于C++的lua代码格式化插件。经过长期实践，发现人们对代码格式化的预期是尽可能少的改变自己代码的基本布局，尽可能的优化符号间不合理的空白，可配置的调整不同语句之间的间距。
+CN: 该插件是基于C++的lua代码格式化插件。经过长期实践，发现人们对代码格式化的预期是尽可能少的改变自己代码的基本布局，尽可能的优化符号间不合理的空白，可配置的调整不同语句之间的间距。
 
 基于这样的想法，我设计了lua格式化算法并实现了该插件，该插件同时具备代码格式化和代码风格检测，该插件的[格式化算法/语言服务地址](https://github.com/CppCXY/EmmyLuaCodeStyle)
 
-EN: This project is a C++ based lua code formatting plug-in. After long-term practice, it is found that people's expectation of code formatting is to change the basic layout of their code as little as possible, to optimize the unreasonable blank space between symbols as much as possible, and to adjust the spacing between different statements.
+EN: This plugin is a C++ based lua code formatting plug-in. After long-term practice, it is found that people's expectation of code formatting is to change the basic layout of their code as little as possible, to optimize the unreasonable blank space between symbols as much as possible, and to adjust the spacing between different statements.
 
 Based on this idea, I designed the lua formatting algorithm and realizes the plug-in, the plug-in support code format and check code style at the same time detection, the plugin [formatting algorithm/language server address](https://github.com/CppCXY/EmmyLuaCodeStyle)
 
 ## 特别说明(Special note）
 
 CN: 
-1. 范围格式化(rangeformatting)的快捷键是ctrl+k+f，同时支持范围格式化后可以设置editor.formatOnPaste支持粘贴代码格式化。
+1. 范围格式化(rangeformatting)的快捷键是ctrl+k+f，因为支持范围格式化，所以可以设置editor.formatOnPaste支持粘贴代码格式化。
 
 2. 键入字符格式化(typeformatting)仅支持键入换行符时触发，该特性开启需要设置editor.formatOnType。
 
-3. 命名风格检查默认不开启
+3. 命名风格检查默认不开启。
 
+4. 插件性能上无论是代码诊断还是代码格式化对于单文件在3万行以内都能立即响应。10万行左右的代码会有2秒的延迟感，足够日常使用。
 
 EN:
 1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
@@ -40,6 +41,8 @@ EN:
 2. Type character formatting only supports triggering when typing line breaks, which require setting editor.formatOnType when turned on.
 
 3. Naming style checking is not turned on by default
+
+4. In terms of plug-in performance, both code diagnosis and code formatting can respond immediately to a single file within 30,000 lines. About 100,000 lines of code will have a delay of 2 seconds, which is enough for daily use.
 
 ## 配置(Configure)
 
