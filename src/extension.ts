@@ -56,6 +56,18 @@ async function startServer() {
 			client: 'vsc',
 			configFiles: configFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString()
+		},
+		middleware: {
+			executeCommand:async (command, args, next) => {
+				if (command === "emmylua.reformat.me") {
+					return next(command, args);
+				}
+				else if (command === "emmylua.import.me")
+				{
+					const selected = await vscode.window.showQuickPick(args);
+					return next(command, selected);
+				}
+			}
 		}
 	};
 
