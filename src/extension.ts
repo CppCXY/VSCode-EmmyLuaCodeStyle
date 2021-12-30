@@ -8,6 +8,11 @@ import * as os from "os";
 import * as fs from "fs";
 import { EditorConfigWatcher, IEditorConfigUpdate } from "./editorConfigWatcher";
 
+interface LuaModule extends vscode.QuickPickItem {
+	moduleName: string;
+	path: string;
+}
+
 const LANGUAGE_ID = 'lua';
 let DEBUG_MODE = true;
 
@@ -58,14 +63,28 @@ async function startServer() {
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString()
 		},
 		middleware: {
-			executeCommand:async (command, args, next) => {
+			executeCommand: async (command, args, next) => {
 				if (command === "emmylua.reformat.me") {
 					return next(command, args);
 				}
-				else if (command === "emmylua.import.me")
-				{
-					const selected = await vscode.window.showQuickPick(args);
-					return next(command, selected);
+				else if (command === "emmylua.import.me") {
+					const modules: LuaModule[] = args.slice(2);
+					const selectList: LuaModule[] = modules.map(e => {
+						return {
+							moduleName: e.moduleName,
+							path: e.path,
+							label: `import from ${e.moduleName}`,
+							description: `${e.path}`
+						}
+					});
+					const selected = await vscode.window.showQuickPick(selectList, {
+						matchOnDescription: true,
+						matchOnDetail: true,
+						placeHolder: "select module import"
+					});
+					if (selected) {
+						return next(command, [args[0], args[1], selected.moduleName]);
+					}
 				}
 			}
 		}
