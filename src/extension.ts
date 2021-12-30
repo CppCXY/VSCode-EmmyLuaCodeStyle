@@ -11,6 +11,7 @@ import { EditorConfigWatcher, IEditorConfigUpdate } from "./editorConfigWatcher"
 interface LuaModule extends vscode.QuickPickItem {
 	moduleName: string;
 	path: string;
+	name: string;
 }
 
 const LANGUAGE_ID = 'lua';
@@ -68,11 +69,12 @@ async function startServer() {
 					return next(command, args);
 				}
 				else if (command === "emmylua.import.me") {
-					const modules: LuaModule[] = args.slice(2);
+					const modules: any[] = args.slice(2);
 					const selectList: LuaModule[] = modules.map(e => {
 						return {
 							moduleName: e.moduleName,
 							path: e.path,
+							name: e.name,
 							label: `import from ${e.moduleName}`,
 							description: `${e.path}`
 						}
@@ -83,7 +85,7 @@ async function startServer() {
 						placeHolder: "select module import"
 					});
 					if (selected) {
-						return next(command, [args[0], args[1], selected.moduleName]);
+						return next(command, [args[0], args[1], selected.moduleName, selected.name]);
 					}
 				}
 			}
