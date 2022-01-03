@@ -2,6 +2,7 @@
 
 ## feature
 - [x] support lua5.1，lua5.2，lua5.3，lua5.4，luajit
+- [x] lua module auto import and quickly fix
 - [x] lua code reformat/range reformat/type format
 - [x] lua code style check/lua name style check
 - [x] support unicode character
@@ -34,6 +35,8 @@ CN:
 
 4. 插件性能上无论是代码诊断还是代码格式化对于单文件在3万行以内都能立即响应。10万行左右的代码会有2秒的延迟感，足够日常使用。
 
+5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
+
 EN:
 1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
@@ -42,6 +45,8 @@ EN:
 3. Naming style checking is not turned on by default
 
 4. In terms of plug-in performance, both code diagnosis and code formatting can respond immediately to a single file within 30,000 lines. About 100,000 lines of code will have a delay of 2 seconds, which is enough for daily use.
+
+5. The auto import is enabled by default. For the configuration document, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle
 
 ## 配置(Configure)
 
@@ -59,11 +64,11 @@ Supports project configuration through the .editorconfig file. The .editorconfig
 
 CN: 
 
-    首先创建.edtorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
+首先创建.edtorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
 
 EN: 
 
-    First create a .edtorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
+First create a .edtorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
 
 ## Road Map
 
@@ -75,8 +80,8 @@ EN:
 
 CN:
 
-    Jetbrain家的IDE将由Intellij-EmmyLua(阿唐)实现，其他编辑器平台如果希望获得支持可以提出相关issue。
+Jetbrain家的IDE将由Intellij-EmmyLua(阿唐)实现，其他编辑器平台如果希望获得支持可以提出相关issue。
 
 EN:
 
-    Jetbrain's IDE will be implemented by Intellij-EmmyLua ( Atang ) , and other editor platforms can come up with associated issues if they wish to gain support.
+Jetbrain's IDE will be implemented by Intellij-EmmyLua (tangzx) , and other editor platforms can come up with associated issues if they wish to gain support.

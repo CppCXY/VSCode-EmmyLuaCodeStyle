@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.4.0
+
+    提供auto import 功能
+
 ## 0.3.2
 
     修复label导致格式化结果不稳定的bug
