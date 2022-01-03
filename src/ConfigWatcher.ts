@@ -7,31 +7,34 @@ export enum UpdateType {
     Deleted
 }
 
-const pattern = '**/.editorconfig';
-
-export interface IEditorConfigSource {
+export interface IConfigSource {
     uri: string;
     path: string;
     workspace: string;
 }
 
-export interface IEditorConfigUpdate {
+export interface IConfigUpdate {
     type: UpdateType;
-    source: IEditorConfigSource;
+    source: IConfigSource;
 }
 
-export class EditorConfigWatcher implements vscode.Disposable {
+export class ConfigWatcher implements vscode.Disposable {
     private watcher?: vscode.FileSystemWatcher;
-    private emitter = new vscode.EventEmitter<IEditorConfigUpdate>();
-    private configFiles: IEditorConfigSource[] = [];
+    private emitter = new vscode.EventEmitter<IConfigUpdate>();
+    private configFiles: IConfigSource[] = [];
 
-    get onConfigUpdate(): vscode.Event<IEditorConfigUpdate> {
+    constructor(private pattern: string) {
+        
+    }
+
+
+    get onConfigUpdate(): vscode.Event<IConfigUpdate> {
         return this.emitter.event;
     }
 
     async watch() {
-        const files = await vscode.workspace.findFiles(pattern);
-        const configFiles: IEditorConfigSource[] = [];
+        const files = await vscode.workspace.findFiles(this.pattern);
+        const configFiles: IConfigSource[] = [];
         for (let i = 0; i < files.length; i++) {
             const fileUri = files[i];
             const ws = path.dirname(fileUri.toString());
@@ -44,7 +47,7 @@ export class EditorConfigWatcher implements vscode.Disposable {
             }
         }
 
-        this.watcher = vscode.workspace.createFileSystemWatcher(pattern);
+        this.watcher = vscode.workspace.createFileSystemWatcher(this.pattern);
         this.watcher.onDidCreate(uri => this.updateConfig(UpdateType.Created, uri));
         this.watcher.onDidChange(uri => this.updateConfig(UpdateType.Changed, uri));
         this.watcher.onDidDelete(uri => this.updateConfig(UpdateType.Deleted, uri));
@@ -53,7 +56,7 @@ export class EditorConfigWatcher implements vscode.Disposable {
         return configFiles;
     }
 
-    private findConfig(uri: vscode.Uri): IEditorConfigSource | undefined {
+    private findConfig(uri: vscode.Uri): IConfigSource | undefined {
         return this.configFiles.find(it => it.uri === uri.toString());
     }
 

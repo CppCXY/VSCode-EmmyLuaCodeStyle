@@ -6,7 +6,7 @@ import { LanguageClient, LanguageClientOptions, ServerOptions, StreamInfo } from
 import * as net from "net";
 import * as os from "os";
 import * as fs from "fs";
-import { EditorConfigWatcher, IEditorConfigUpdate } from "./editorConfigWatcher";
+import { ConfigWatcher, IConfigUpdate } from "./ConfigWatcher";
 
 interface LuaModule extends vscode.QuickPickItem {
 	moduleName: string;
@@ -19,7 +19,8 @@ let DEBUG_MODE = true;
 
 let client: LanguageClient;
 let saveContext: vscode.ExtensionContext;
-let configWatcher: EditorConfigWatcher;
+let editorConfigWatcher: ConfigWatcher;
+let moduleConfigWatcher: ConfigWatcher;
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -28,11 +29,18 @@ export function activate(context: vscode.ExtensionContext) {
 
 	saveContext.subscriptions.push(vscode.commands.registerCommand("emmyluacodestyle.insertEditorConfig", insertEditorConfig));
 
-	configWatcher = new EditorConfigWatcher();
+	editorConfigWatcher = new ConfigWatcher('**/.editorconfig');
 
-	configWatcher.onConfigUpdate(onConfigUpdate);
+	editorConfigWatcher.onConfigUpdate(onEditorConfigUpdate);
 
-	saveContext.subscriptions.push(configWatcher);
+	saveContext.subscriptions.push(editorConfigWatcher);
+
+
+	moduleConfigWatcher = new ConfigWatcher('**/lua.module.json');
+
+	moduleConfigWatcher.onConfigUpdate(onModuleConfigUpdate);
+
+	saveContext.subscriptions.push(moduleConfigWatcher);
 
 	startServer();
 }
@@ -41,14 +49,22 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {
 }
 
-function onConfigUpdate(e: IEditorConfigUpdate) {
+function onEditorConfigUpdate(e: IConfigUpdate) {
 	if (client) {
-		client.sendRequest('updateEditorConfig', e);
+		client.sendRequest('config/editorconfig/update', e);
+	}
+}
+
+function onModuleConfigUpdate(e: IConfigUpdate) {
+	if (client) {
+		client.sendRequest('config/moduleconfig/update', e);
 	}
 }
 
 async function startServer() {
-	const configFiles = await configWatcher.watch();
+	const editorConfigFiles = await editorConfigWatcher.watch();
+	const moduleConfigFiles = await moduleConfigWatcher.watch();
+
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [{ scheme: 'file', language: LANGUAGE_ID }],
 		synchronize: {
@@ -60,7 +76,8 @@ async function startServer() {
 		initializationOptions: {
 			workspaceFolders: vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.map(f => f.uri.toString()) : null,
 			client: 'vsc',
-			configFiles: configFiles,
+			editorConfigFiles,
+			moduleConfigFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString()
 		},
 		middleware: {
@@ -79,13 +96,19 @@ async function startServer() {
 							description: `${e.path}`
 						}
 					});
-					const selected = await vscode.window.showQuickPick(selectList, {
-						matchOnDescription: true,
-						matchOnDetail: true,
-						placeHolder: "select module import"
-					});
-					if (selected) {
+					if (selectList.length === 1) {
+						const selected = selectList[0];
 						return next(command, [args[0], args[1], selected.moduleName, selected.name]);
+					}
+					else{
+						const selected = await vscode.window.showQuickPick(selectList, {
+							matchOnDescription: true,
+							matchOnDetail: true,
+							placeHolder: "select module import"
+						});
+						if (selected) {
+							return next(command, [args[0], args[1], selected.moduleName, selected.name]);
+						}
 					}
 				}
 			}
