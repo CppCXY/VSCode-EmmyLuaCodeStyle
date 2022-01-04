@@ -72,7 +72,7 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 ## Road Map
 
-- auto import
+- code quality check
 - support plugin
 
 
