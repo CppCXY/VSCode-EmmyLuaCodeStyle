@@ -2,9 +2,9 @@ import path = require('path');
 import * as vscode from 'vscode';
 
 export enum UpdateType {
-    Created,
-    Changed,
-    Deleted
+    Created = 1,
+    Changed = 2,
+    Deleted = 3
 }
 
 export interface IConfigSource {
