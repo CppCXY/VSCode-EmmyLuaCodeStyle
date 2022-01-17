@@ -33,7 +33,7 @@ CN:
 
 3. 命名风格检查默认不开启。
 
-4. 插件性能上无论是代码诊断还是代码格式化对于单文件在3万行以内都能立即响应。10万行左右的代码会有2秒的延迟感，足够日常使用。
+4. 插件性能能够满足单文件10万行内的快速响应
 
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
 
@@ -44,7 +44,7 @@ EN:
 
 3. Naming style checking is not turned on by default
 
-4. In terms of plug-in performance, both code diagnosis and code formatting can respond immediately to a single file within 30,000 lines. About 100,000 lines of code will have a delay of 2 seconds, which is enough for daily use.
+4. The plug-in performance can meet the rapid response within 100000 lines of a single file
 
 5. The auto import is enabled by default. For the configuration document, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle
 
