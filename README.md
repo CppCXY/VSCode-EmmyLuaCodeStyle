@@ -33,7 +33,7 @@ CN:
 
 3. 命名风格检查默认不开启。
 
-4. 插件性能能够满足单文件10万行内的快速响应
+4. 插件性能能够满足单文件10万行内的诊断/格式化快速响应
 
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
 
