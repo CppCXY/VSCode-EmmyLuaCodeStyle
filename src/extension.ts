@@ -78,7 +78,8 @@ async function startServer() {
 			client: 'vsc',
 			editorConfigFiles,
 			moduleConfigFiles,
-			localeRoot: path.join(saveContext.extensionPath, "locale").toString()
+			localeRoot: path.join(saveContext.extensionPath, "locale").toString(),
+			// extensionChars: "@$"
 		},
 		middleware: {
 			executeCommand: async (command, args, next) => {
