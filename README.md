@@ -33,7 +33,7 @@ CN:
 
 3. 命名风格检查默认不开启。
 
-4. 插件性能能够满足单文件10万行内的诊断/格式化快速响应
+4. 插件性能能够满足单文件10万行内格式化快速响应
 
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
 
@@ -80,8 +80,9 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 CN:
 
-Jetbrain家的IDE将由Intellij-EmmyLua(阿唐)实现，其他编辑器平台如果希望获得支持可以提出相关issue。
-
+1. Jetbrain家的IDE将由Intellij-EmmyLua(阿唐)实现，其他编辑器平台如果希望获得支持可以提出相关issue。
+2. sumneko_lua 内部已经集成该插件的格式化/代码诊断算法
 EN:
 
-Jetbrain's IDE will be implemented by Intellij-EmmyLua (tangzx) , and other editor platforms can come up with associated issues if they wish to gain support.
+1. Jetbrain's IDE will be implemented by Intellij-EmmyLua (tangzx) , and other editor platforms can come up with associated issues if they wish to gain support.
+2. The formatting/code diagnosis algorithm of this plugin has been integrated into sumneko_lua 
