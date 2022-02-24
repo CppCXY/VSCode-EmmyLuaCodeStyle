@@ -38,7 +38,7 @@ CN:
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
 
 EN:
-1. The shortcut to rangeform formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
+1. The shortcut to range formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
 2. Type character formatting only supports triggering when typing line breaks, which require setting editor.formatOnType when turned on.
 
