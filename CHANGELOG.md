@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8.1
+
+`FIX` [#24](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/24)
+
 ## 0.8.0
 
 `Resolve` [#20](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/20)
