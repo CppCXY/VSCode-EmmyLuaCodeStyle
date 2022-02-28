@@ -12,7 +12,7 @@
 		"lua codestyle",
 		"auto import"
 	],
-	"version": "0.8.3",
+	"version": "0.8.4",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
