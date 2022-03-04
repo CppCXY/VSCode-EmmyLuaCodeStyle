@@ -72,6 +72,8 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 ## Road Map
 
+- new linter
+- support string match
 - code quality check
 - support plugin
 

@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8.5
+
+修复一个bug:纯注释文件会被直接清空
+
 ## 0.8.4
 
 `FIX` [#27](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/27)
