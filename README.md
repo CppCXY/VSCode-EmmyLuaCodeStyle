@@ -82,10 +82,10 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 CN:
 
-1. Jetbrain家的IDE将由Intellij-EmmyLua(阿唐)实现，其他编辑器平台如果希望获得支持可以提出相关issue。
+1. Intellij-EmmyLua在master分支中已由我实现，其他编辑器平台如果希望获得支持可以提出相关issue。
 2. sumneko_lua 内部已经集成该插件的格式化/代码诊断算法
 
 EN:
 
-1. Jetbrain's IDE will be implemented by Intellij-EmmyLua (tangzx) , and other editor platforms can come up with associated issues if they wish to gain support.
+1. Intellij-EmmyLua has been implemented by me in the master branch, and other editor platforms can propose related issues if they want support
 2. The formatting/code diagnosis algorithm of this plugin has been integrated into sumneko_lua 
