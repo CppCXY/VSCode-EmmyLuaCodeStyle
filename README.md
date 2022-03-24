@@ -27,6 +27,7 @@ Based on this idea, I designed the lua formatting algorithm and realizes the plu
 ## 特别说明(Special note）
 
 CN: 
+
 1. 范围格式化(rangeformatting)的快捷键是ctrl+k+f，因为支持范围格式化，所以可以设置editor.formatOnPaste支持粘贴代码格式化。
 
 2. 键入字符格式化(typeformatting)仅支持键入换行符时触发，该特性开启需要设置editor.formatOnType。
@@ -37,7 +38,10 @@ CN:
 
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
 
+6. 如果无法启动插件请检查是否有MSVCP140_ATOMIC_WAIT.dll
+
 EN:
+
 1. The shortcut to range formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
 
 2. Type character formatting only supports triggering when typing line breaks, which require setting editor.formatOnType when turned on.
@@ -47,6 +51,8 @@ EN:
 4. The plug-in performance can meet the rapid response within 100000 lines of a single file
 
 5. The auto import is enabled by default. For the configuration document, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle
+
+6. If you cannot start the plugin, check if there is MSVCP140_ATOMIC_WAIT.dll
 
 ## 配置(Configure)
 

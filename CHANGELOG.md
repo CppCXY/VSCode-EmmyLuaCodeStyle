@@ -1,8 +1,27 @@
 # Change Log
+## 0.9.7
 
-## 0.9.1
+`IMPL` [#31](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/31)
 
-命令行工具输出到stdout时行尾必然为\n
+`IMPL` [#30](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/30)
+
+1. 格式化会移除注释的尾部空白
+2. 通过选项`if_branch_comments_after_block_no_indent = true` 允许在else/elseif分支之上的注释不会缩进到语句块内部
+
+## 0.9.6
+
+命令行工具帮助打印更规范
+## 0.9.5
+
+命令行工具在指定单输入文件时可以指定工作区，这可以帮助detect config。
+
+## 0.9.4
+
+修复命令行工具无法输出到文件的bug
+
+## 0.9.2
+
+命令行工具支持批量格式化和批量诊断
 
 ## 0.9.0
 
@@ -35,8 +54,11 @@
 ## 0.8.0
 
 `Resolve` [#20](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/20)
+
 `Resolve` [#17](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/17)
+
 `Resolve` [#16](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/16)
+
 `Resolve` [#15](https://github.com/CppCXY/EmmyLuaCodeStyle/issues/15)
 
 主要更新的特性为允许设定单双引号风格，对齐时采用最小对齐,允许移除函数调用的括号
