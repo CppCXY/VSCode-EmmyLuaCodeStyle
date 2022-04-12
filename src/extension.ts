@@ -64,11 +64,11 @@ function onModuleConfigUpdate(e: IConfigUpdate) {
 async function startServer() {
 	const editorConfigFiles = await editorConfigWatcher.watch();
 	const moduleConfigFiles = await moduleConfigWatcher.watch();
-
+    const config = vscode.workspace.getConfiguration();
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [{ scheme: 'file', language: LANGUAGE_ID }],
 		synchronize: {
-			configurationSection: ["emmylua.codestyle", "files.associations"],
+			configurationSection: ["emmylua-codestyle", "files.associations"],
 			fileEvents: [
 				vscode.workspace.createFileSystemWatcher("**/*.lua")
 			]
@@ -79,6 +79,11 @@ async function startServer() {
 			editorConfigFiles,
 			moduleConfigFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString(),
+			vscodeConfig: {
+				"lint.codeStyle": config.get<boolean>("lint.codeStyle"),
+				"lint.moduleCheck": config.get<boolean>("lint.moduleCheck"),
+				"autoImport": config.get<boolean>("autoImport"),
+			}
 			// extensionChars: "@$"
 		},
 		middleware: {
@@ -171,7 +176,7 @@ async function startServer() {
 			args: []
 		};
 	}
-
+	
 	client = new LanguageClient(LANGUAGE_ID, "EmmyLuaCodeStyle plugin for vscode.", serverOptions, clientOptions);
 	saveContext.subscriptions.push(client.start());
 	await client.onReady();
