@@ -1,5 +1,20 @@
 # Change Log
 
+## 0.10.3
+
+`NEW` 命令行工具支持使用通配符过滤
+
+## 0.10.2
+
+`CHANGE` 默认情况下namedef和attribute会有一个空格的距离
+
+`NEW` 行布局支持使用`maxLine:$n`指定与下一行的最大行距
+
+`NEW` 行宽允许设定为unset
+
+`CHANGE` 函数调用的排版方式变更，更符合lua中的一些使用习惯
+
+
 ## 0.10.0
 
 `NEW` vscode插件端实现配置EmmyluaCodeStyle开关`模块诊断`,`代码风格诊断`, `模块补全`.
