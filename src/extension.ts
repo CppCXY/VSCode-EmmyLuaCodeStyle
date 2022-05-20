@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 	DEBUG_MODE = process.env['EMMY_DEV'] === "true";
 	saveContext = context;
 
-	saveContext.subscriptions.push(vscode.commands.registerCommand("emmyluacodestyle.insertEditorConfig", insertEditorConfig));
+	saveContext.subscriptions.push(vscode.commands.registerCommand("emmylua.codestyle.insertEditorConfig", insertEditorConfig));
 
 	editorConfigWatcher = new ConfigWatcher('**/.editorconfig');
 
@@ -41,6 +41,8 @@ export function activate(context: vscode.ExtensionContext) {
 	moduleConfigWatcher.onConfigUpdate(onModuleConfigUpdate);
 
 	saveContext.subscriptions.push(moduleConfigWatcher);
+
+	registerCustomCommands(saveContext);
 
 	startServer();
 }
@@ -61,14 +63,32 @@ function onModuleConfigUpdate(e: IConfigUpdate) {
 	}
 }
 
+function registerCustomCommands(context: vscode.ExtensionContext) {
+	context.subscriptions.push(vscode.commands.registerCommand('emmylua.spell.addDict', (word) => {
+		let config = vscode.workspace.getConfiguration();
+		let value: any[] | undefined = config.get("emmylua.spell.dict");
+		if (value === undefined) {
+			value = [];
+		}
+
+		value.push(word);
+		config.update("emmylua.spell.dict", value, vscode.ConfigurationTarget.Workspace);
+	}))
+}
+
 async function startServer() {
 	const editorConfigFiles = await editorConfigWatcher.watch();
 	const moduleConfigFiles = await moduleConfigWatcher.watch();
-    const config = vscode.workspace.getConfiguration();
+	const config = vscode.workspace.getConfiguration();
+	let dictionaryPath = [
+		path.join(saveContext.extensionPath, "dictionary", "dictionary.txt").toString(),
+		path.join(saveContext.extensionPath, "dictionary", "lua_dict.txt").toString()
+	]
+	
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [{ scheme: 'file', language: LANGUAGE_ID }],
 		synchronize: {
-			configurationSection: ["emmylua-codestyle", "files.associations"],
+			configurationSection: ["emmylua", "files.associations"],
 			fileEvents: [
 				vscode.workspace.createFileSystemWatcher("**/*.lua")
 			]
@@ -80,18 +100,17 @@ async function startServer() {
 			moduleConfigFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString(),
 			vscodeConfig: {
-				"lint.codeStyle": config.get<boolean>("lint.codeStyle"),
-				"lint.moduleCheck": config.get<boolean>("lint.moduleCheck"),
-				"autoImport": config.get<boolean>("autoImport"),
-			}
+				"emmylua.lint.codeStyle": config.get<boolean>("emmylua.lint.codeStyle"),
+				"emmylua.lint.moduleCheck": config.get<boolean>("emmylua.lint.moduleCheck"),
+				"emmylua.spell.enable": config.get<boolean>("emmylua.spell.enable"),
+				"emmylua.spell.dict": config.get<any>("emmylua.spell.dict")
+			},
+			dictionaryPath
 			// extensionChars: "@$"
 		},
 		middleware: {
 			executeCommand: async (command, args, next) => {
-				if (command === "emmylua.reformat.me") {
-					return next(command, args);
-				}
-				else if (command === "emmylua.import.me") {
+				if (command === "emmylua.import.me") {
 					const modules: any[] = args.slice(2);
 					const selectList: LuaModule[] = modules.map(e => {
 						return {
@@ -106,7 +125,7 @@ async function startServer() {
 						const selected = selectList[0];
 						return next(command, [args[0], args[1], selected.moduleName, selected.name]);
 					}
-					else{
+					else {
 						const selected = await vscode.window.showQuickPick(selectList, {
 							matchOnDescription: true,
 							matchOnDetail: true,
@@ -116,6 +135,9 @@ async function startServer() {
 							return next(command, [args[0], args[1], selected.moduleName, selected.name]);
 						}
 					}
+				}
+				else {
+					return next(command, args);
 				}
 			}
 		}
@@ -176,7 +198,7 @@ async function startServer() {
 			args: []
 		};
 	}
-	
+
 	client = new LanguageClient(LANGUAGE_ID, "EmmyLuaCodeStyle plugin for vscode.", serverOptions, clientOptions);
 	saveContext.subscriptions.push(client.start());
 	await client.onReady();

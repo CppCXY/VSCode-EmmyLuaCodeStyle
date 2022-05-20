@@ -10,9 +10,10 @@
 		"luaformat",
 		"lua formatter",
 		"lua codestyle",
+		"lua spell",
 		"auto import"
 	],
-	"version": "0.10.3",
+	"version": "0.11.0",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
@@ -32,29 +33,34 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "emmyluacodestyle.insertEditorConfig",
+				"command": "emmylua.codestyle.insertEditorConfig",
 				"title": "insert luaCodeStyle template"
 			}
 		],
 		"configuration": {
 			"title": "EmmyLuaCodeStyle",
-            "properties": {
-                "lint.codeStyle": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "enable codestyle check"
-                },
-				"lint.moduleCheck": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "enable undefine module check"
-                },
-				"autoImport": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "enable auto module import"
-                }
-
+			"properties": {
+				"emmylua.lint.codeStyle": {
+					"type": "boolean",
+					"default": true,
+					"description": "enable codestyle check"
+				},
+				"emmylua.lint.moduleCheck": {
+					"type": "boolean",
+					"default": true,
+					"description": "enable undefine module check"
+				},
+				"emmylua.spell.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "enable spell check"
+				},
+				"emmylua.spell.dict": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		}
 	},

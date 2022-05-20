@@ -4,6 +4,18 @@
 
 `NEW` 命令行工具支持使用通配符过滤
 
+## 0.11.0
+
+`CHANGE` 重构了语言服务的代码组织，暂时移除插件对补全的影响，插件不在代码补全时提示模块了
+
+`CHANGE` 优化了模块诊断时提示的内容
+
+`NEW` 提供针对lua优化的标识符单词拼写检查算法
+
+`NEW` 提供了新的格式化选项:
+* `remove_empty_header_and_footer_lines_in_function` 允许移除函数的上面和下面多余空行
+* `remove_expression_list_finish_comma` 允许移除函数调用时最后一个逗号(这本身是一个语法错误)
+
 ## 0.10.2
 
 `CHANGE` 默认情况下namedef和attribute会有一个空格的距离

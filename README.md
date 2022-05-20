@@ -5,6 +5,7 @@
 - [x] lua module auto import and quickly fix
 - [x] lua code reformat/range reformat/type format
 - [x] lua code style check/lua name style check
+- [x] lua identify spell check
 - [x] support unicode character
 - [x] English document
 - [x] fast and low memory 
