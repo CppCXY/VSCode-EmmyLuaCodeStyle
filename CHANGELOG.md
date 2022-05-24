@@ -1,8 +1,10 @@
 # Change Log
 
-## 0.10.3
+## 0.11.3
 
-`NEW` 命令行工具支持使用通配符过滤
+`CHANGE` 更新词典
+
+`CHANGE` 语言服务按lsp3.17版本重新设计, 诊断采用lsp规定的方式诊断。
 
 ## 0.11.2
 
@@ -19,6 +21,10 @@
 `NEW` 提供了新的格式化选项:
 * `remove_empty_header_and_footer_lines_in_function` 允许移除函数的上面和下面多余空行
 * `remove_expression_list_finish_comma` 允许移除函数调用时最后一个逗号(这本身是一个语法错误)
+
+## 0.10.3
+
+`NEW` 命令行工具支持使用通配符过滤
 
 ## 0.10.2
 

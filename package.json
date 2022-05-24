@@ -13,11 +13,11 @@
 		"lua spell",
 		"auto import"
 	],
-	"version": "0.11.2",
+	"version": "0.11.3",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
-		"vscode": "^1.62.0"
+		"vscode": "^1.67.0"
 	},
 	"repository": "https://github.com/CppCXY/EmmyLuaCodeStyle",
 	"categories": [
@@ -76,7 +76,7 @@
 		"@types/glob": "^7.1.4",
 		"@types/mocha": "^9.0.0",
 		"@types/node": "14.x",
-		"@types/vscode": "^1.62.0",
+		"@types/vscode": "^1.67.0",
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
 		"@typescript-eslint/parser": "^5.1.0",
 		"@vscode/test-electron": "^1.6.2",
@@ -87,6 +87,6 @@
 		"download": "^8.0.0"
 	},
 	"dependencies": {
-		"vscode-languageclient": "^7.0.0"
+		"vscode-languageclient": "^8.0.0"
 	}
 }
