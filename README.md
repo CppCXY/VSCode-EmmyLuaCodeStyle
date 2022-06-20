@@ -1,15 +1,13 @@
 # EmmyLuaCodeStyle
 
-## feature
-- [x] support lua5.1，lua5.2，lua5.3，lua5.4，luajit
-- [x] lua module auto import and quickly fix
+## Features
+- [x] support lua5.1, lua5.2, lua5.3, lua5.4, luajit
 - [x] lua code reformat/range reformat/type format
-- [x] lua code style check/lua name style check
-- [x] lua identify spell check
+- [x] lua code style check
+- [x] lua word spell check
 - [x] support unicode character
-- [x] English document
-- [x] fast and low memory 
-- [x] support windows/linux/macosx/macosx m1
+- [x] very fast and low memory 
+- [x] support windows-x64/linux-x64/macosx-x64/macosx-arm64
 
 ## 介绍(Introduce)
 
@@ -35,11 +33,9 @@ CN:
 
 3. 命名风格检查默认不开启。
 
-4. 插件性能能够满足单文件10万行内格式化快速响应
+4. 插件性能能够满足单文件几万行的lua代码的格式化快速响应
 
 5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
-
-6. 如果无法启动插件请检查是否有MSVCP140_ATOMIC_WAIT.dll
 
 EN:
 
@@ -52,8 +48,6 @@ EN:
 4. The plug-in performance can meet the rapid response within 100000 lines of a single file
 
 5. The auto import is enabled by default. For the configuration document, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle
-
-6. If you cannot start the plugin, check if there is MSVCP140_ATOMIC_WAIT.dll
 
 ## 配置(Configure)
 
@@ -79,20 +73,17 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 ## Road Map
 
-- new linter
-- support string match
-- code quality check
+- reimplement range formatting
 - support plugin
-
 
 ## 其他平台(Other Platform)
 
 CN:
 
-1. Intellij-EmmyLua在master分支中已由我实现，其他编辑器平台如果希望获得支持可以提出相关issue。
-2. sumneko_lua 内部已经集成该插件的格式化/代码诊断算法
+1. `Intellij-EmmyLua`在开发分支中已由我实现，其他编辑器平台如果希望获得支持可以提出相关issue。
+2. `sumneko_lua`已经集成该插件的格式化/代码诊断算法
 
 EN:
 
-1. Intellij-EmmyLua has been implemented by me in the master branch, and other editor platforms can propose related issues if they want support
-2. The formatting/code diagnosis algorithm of this plugin has been integrated into sumneko_lua 
+1. `Intellij-EmmyLua` has been implemented by me in the master branch, and other editor platforms can propose related issues if they want support
+2. The formatting/code diagnosis algorithm of this plugin has been integrated into `sumneko_lua` 
