@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.14.0
+
+`CHANGE` 配置项`insert_final_newline`现在符合.editorconfig规定
+
+`CHANGE` 支持`break` 和 `goto` 语句后的分号
+
+`CHANGE` 格式化将移除空行分号，移除if语句，while语句，repeat语句后的分号
+
+`NEW` 支持通过注解部分屏蔽格式化，详细看[disable-format](https://github.com/CppCXY/EmmyLuaCodeStyle/blob/master/docs/disable_format.md)
+
+
 ## 0.13.0
 
 `CHANGE` 放宽对齐调用表达式的限制

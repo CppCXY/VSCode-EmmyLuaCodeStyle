@@ -24,7 +24,7 @@ let moduleConfigWatcher: ConfigWatcher;
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	DEBUG_MODE = process.env['EMMY_DEV'] === "true";
+	DEBUG_MODE = process.env['EMMY_CODESTYLE_DEV'] === "true";
 	saveContext = context;
 
 	saveContext.subscriptions.push(vscode.commands.registerCommand("emmylua.codestyle.insertEditorConfig", insertEditorConfig));

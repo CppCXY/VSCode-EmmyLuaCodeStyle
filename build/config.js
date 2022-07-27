@@ -1,5 +1,5 @@
 exports.default = {
-    lanServerVersion: "0.13.0",
+    lanServerVersion: "0.14.0",
     lanServerUrl: 'https://github.com/CppCXY/EmmyLuaCodeStyle/releases/download'
 }
 
