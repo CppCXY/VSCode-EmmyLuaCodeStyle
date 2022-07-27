@@ -1,7 +1,5 @@
 # EmmyLuaCodeStyle
 
-[![OSCS Status](https://www.oscs1024.com/platform/badge/CppCXY/VSCode-EmmyLuaCodeStyle.svg?size=small)](https://www.murphysec.com/dr/l3zuUicBN17VpLnVj1)
-
 ## Features
 - [x] support lua5.1, lua5.2, lua5.3, lua5.4, luajit
 - [x] lua code reformat/range reformat/type format
