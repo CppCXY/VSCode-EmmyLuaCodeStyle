@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.14.1
+
+`FIX` 修复因为设置`insert_final_newline = false`和开启typeOnFormat特性导致回车无效得BUG
+
 ## 0.14.0
 
 `CHANGE` 配置项`insert_final_newline`现在符合.editorconfig规定
