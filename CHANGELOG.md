@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.15.0
+
+`CHANGE` 改变代码风格检查时提示的文字
+
 ## 0.14.1
 
 `FIX` 修复因为设置`insert_final_newline = false`和开启typeOnFormat特性导致回车无效得BUG
