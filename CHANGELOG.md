@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.16.0
+
+`NEW` 开启typeformat后，键入'\n'时会自动补完缺失的end
+
 ## 0.15.0
 
 `CHANGE` 改变代码风格检查时提示的文字
