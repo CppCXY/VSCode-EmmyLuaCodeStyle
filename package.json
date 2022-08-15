@@ -13,7 +13,7 @@
 		"lua spell",
 		"auto import"
 	],
-	"version": "0.16.0",
+	"version": "0.16.1",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {

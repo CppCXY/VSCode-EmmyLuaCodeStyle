@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.16.1
+
+`FIX` 优化typeformat体验
+
 ## 0.16.0
 
 `NEW` 开启typeformat后，键入'\n'时会自动补完缺失的end
