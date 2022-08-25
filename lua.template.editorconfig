@@ -24,6 +24,7 @@ detect_end_of_line = false
 # this option decides when to chopdown the code
 max_line_length = 120
 
+# this will check text end with new line
 insert_final_newline = true
 
 # [function]
@@ -41,6 +42,12 @@ remove_expression_list_finish_comma = true
 call_arg_parentheses = keep
 
 # [table]
+
+#optional none/comma/semicolon
+table_separator_style = none
+
+#optional keep/never/always/smart
+trailing_table_separator = keep
 
 # see document for detail
 continuous_assign_table_field_align_to_equal_sign = true
@@ -67,6 +74,8 @@ if_condition_align_with_each_other = false
 # if true, continuation_indent_size for local or assign statement is invalid
 # however, if the expression list has cross row expression, it will not be aligned to the first expression
 local_assign_continuation_align_to_first_expression = false
+
+statement_inline_comment_space = 1
 
 # [indentation]
 

@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.17.2
+
+`NEW` typeformat会智能填补表项之后的逗号
+
+`NEW` 支持选项`table_separator_style` 可选值为`none/comma/semicolon`
+
+`NEW` 支持选项`trailing_table_separator` 可选值为 `keep/never/always/smart`
+
 ## 0.16.1
 
 `FIX` 优化typeformat体验
