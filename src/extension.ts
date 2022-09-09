@@ -202,8 +202,7 @@ async function startServer() {
 	client = new LanguageClient(LANGUAGE_ID, "EmmyLuaCodeStyle plugin for vscode.", serverOptions, clientOptions);
 	client.start().then(() => {
 		console.log("client ready");
-	})
-
+	});
 }
 
 function insertEditorConfig() {

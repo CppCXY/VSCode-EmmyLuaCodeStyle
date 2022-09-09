@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.18.0
+
+`FIX` typeformat不会在字符串或者长注释内部做格式化行为
+
+以下由[@obszczymucha](https://github.com/obszczymucha)实现:
+
+`NEW` 支持选项
+* `space_inside_function_call_parentheses`
+* `space_inside_function_param_list_parentheses`
+* `space_inside_square_brackets`
+
+
 ## 0.17.2
 
 `NEW` typeformat会智能填补表项之后的逗号
