@@ -1,8 +1,8 @@
 const fs = require('fs');
 const download = require('download');
-const decompress = require('decompress')
+const decompress = require('decompress');
 const config = require('./config').default;
-const args = process.argv
+const args = process.argv;
 
 async function downloadTo(url, path) {
     return new Promise((r, e) => {
@@ -13,18 +13,18 @@ async function downloadTo(url, path) {
 }
 
 async function downloadDepends() {
-    await Promise.all([        
+    await Promise.all([
         downloadTo(`${config.lanServerUrl}/${config.lanServerVersion}/${args[2]}.zip`, 'temp/CodeFormat.zip'),
     ]);
 }
 
 async function build() {
     if (!fs.existsSync('temp')) {
-        fs.mkdirSync('temp')
+        fs.mkdirSync('temp');
     }
-    
+
     await downloadDepends();
-    
+
     await decompress('temp/CodeFormat.zip', 'temp/server');
 
     // await fc('temp/server','server',  { mkdirp: true });
