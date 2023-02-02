@@ -35,13 +35,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 	saveContext.subscriptions.push(editorConfigWatcher);
 
-
-	moduleConfigWatcher = new ConfigWatcher('**/lua.module.json');
-
-	moduleConfigWatcher.onConfigUpdate(onModuleConfigUpdate);
-
-	saveContext.subscriptions.push(moduleConfigWatcher);
-
 	registerCustomCommands(saveContext);
 
 	startServer();
@@ -54,12 +47,6 @@ export function deactivate() {
 function onEditorConfigUpdate(e: IConfigUpdate) {
 	if (client) {
 		client.sendRequest('config/editorconfig/update', e);
-	}
-}
-
-function onModuleConfigUpdate(e: IConfigUpdate) {
-	if (client) {
-		client.sendRequest('config/moduleconfig/update', e);
 	}
 }
 
@@ -78,7 +65,7 @@ function registerCustomCommands(context: vscode.ExtensionContext) {
 
 async function startServer() {
 	const editorConfigFiles = await editorConfigWatcher.watch();
-	const moduleConfigFiles = await moduleConfigWatcher.watch();
+	// const moduleConfigFiles = await moduleConfigWatcher.watch();
 	const config = vscode.workspace.getConfiguration();
 	let dictionaryPath = [
 		path.join(saveContext.extensionPath, "dictionary", "dictionary.txt").toString(),
@@ -97,49 +84,14 @@ async function startServer() {
 			workspaceFolders: vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders.map(f => f.uri.toString()) : null,
 			client: 'vsc',
 			editorConfigFiles,
-			moduleConfigFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString(),
 			vscodeConfig: {
 				"emmylua.lint.codeStyle": config.get<boolean>("emmylua.lint.codeStyle"),
-				"emmylua.lint.moduleCheck": config.get<boolean>("emmylua.lint.moduleCheck"),
 				"emmylua.spell.enable": config.get<boolean>("emmylua.spell.enable"),
 				"emmylua.spell.dict": config.get<any>("emmylua.spell.dict")
 			},
 			dictionaryPath
 			// extensionChars: "@$"
-		},
-		middleware: {
-			executeCommand: async (command, args, next) => {
-				if (command === "emmylua.import.me") {
-					const modules: any[] = args.slice(2);
-					const selectList: LuaModule[] = modules.map(e => {
-						return {
-							moduleName: e.moduleName,
-							path: e.path,
-							name: e.name,
-							label: `import from ${e.moduleName}`,
-							description: `${e.path}`
-						}
-					});
-					if (selectList.length === 1) {
-						const selected = selectList[0];
-						return next(command, [args[0], args[1], selected.moduleName, selected.name]);
-					}
-					else {
-						const selected = await vscode.window.showQuickPick(selectList, {
-							matchOnDescription: true,
-							matchOnDetail: true,
-							placeHolder: "select module import"
-						});
-						if (selected) {
-							return next(command, [args[0], args[1], selected.moduleName, selected.name]);
-						}
-					}
-				}
-				else {
-					return next(command, args);
-				}
-			}
 		}
 	};
 
@@ -212,7 +164,6 @@ function insertEditorConfig() {
 	if (!activeEditor) {
 		return;
 	}
-	const document = activeEditor.document;
 
 	const ins = new vscode.SnippetString();
 
