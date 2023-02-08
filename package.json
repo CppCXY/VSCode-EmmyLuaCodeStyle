@@ -13,7 +13,7 @@
 		"lua spell",
 		"auto import"
 	],
-	"version": "0.18.0",
+	"version": "1.0.0",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
@@ -43,12 +43,12 @@
 				"emmylua.lint.codeStyle": {
 					"type": "boolean",
 					"default": true,
-					"description": "enable codestyle check"
+					"description": "enable code-style check"
 				},
-				"emmylua.lint.moduleCheck": {
+				"emmylua.lint.nameStyle": {
 					"type": "boolean",
-					"default": true,
-					"description": "enable undefine module check"
+					"default": false,
+					"description": "enable name-style check"
 				},
 				"emmylua.spell.enable": {
 					"type": "boolean",

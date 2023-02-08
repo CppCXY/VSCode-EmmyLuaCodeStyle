@@ -2,9 +2,10 @@
 
 ## Features
 - [x] support lua5.1, lua5.2, lua5.3, lua5.4, luajit
-- [x] lua code reformat/range reformat/type format
+- [x] lua code reformat/range format/type format
 - [x] lua code style check
 - [x] lua word spell check
+- [x] lua name style check
 - [x] support unicode character
 - [x] very fast and low memory 
 - [x] support windows-x64/linux-x64/macosx-x64/macosx-arm64
@@ -73,7 +74,6 @@ First create a .edtorconfig file and then enter Ctrl + shift + p to open the com
 
 ## Road Map
 
-- reimplement range formatting
 - support plugin
 
 ## 其他平台(Other Platform)
