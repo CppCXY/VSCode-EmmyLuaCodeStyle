@@ -1,4 +1,7 @@
 # Change Log
+## 1.0.2
+
+`FIX` 修复lineIndex错误导致的Unicode字符BUG
 
 ## 1.0.0
 
