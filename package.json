@@ -10,10 +10,9 @@
 		"luaformat",
 		"lua formatter",
 		"lua codestyle",
-		"lua spell",
-		"auto import"
+		"lua spell"
 	],
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
@@ -87,6 +86,6 @@
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
-		"vscode-languageclient": "^8.0.2"
+		"vscode-languageclient": "^8.1.0"
 	}
 }

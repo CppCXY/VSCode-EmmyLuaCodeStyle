@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.4
+
+`Upgrade` 试图修复vscode-languageclient带来的依赖错误
+
 ## 1.0.3
 
 `Upgrade` 试图修复插件无法激活的问题, 更新所有依赖库
