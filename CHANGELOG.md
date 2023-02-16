@@ -1,4 +1,13 @@
 # Change Log
+
+## 1.0.3
+
+`Upgrade` 试图修复插件无法激活的问题, 更新所有依赖库
+
+`FIX` 修复一个格式化行为.
+
+`NEW` 选项`space_before_function_call_single_arg`支持其他值always/only_string/only_table/none
+
 ## 1.0.2
 
 `FIX` 修复lineIndex错误导致的Unicode字符BUG
