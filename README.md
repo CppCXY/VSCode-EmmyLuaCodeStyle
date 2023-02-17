@@ -66,15 +66,15 @@ Supports project configuration through the .editorconfig file. The .editorconfig
 
 CN: 
 
-首先创建.edtorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
+首先创建.editorconfig文件然后输入Ctrl + shift + p 打开命令窗口，输入insert luaCodeStyle template
 
 EN: 
 
-First create a .edtorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
+First create a .editorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
 
 ## Road Map
 
-- support plugin
+- support plugin[0%]
 
 ## 其他平台(Other Platform)
 

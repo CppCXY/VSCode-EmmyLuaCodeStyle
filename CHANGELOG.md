@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.5
+
+`FIX` 修复文件增量更新算法的BUG
+
 ## 1.0.4
 
 `Upgrade` 试图修复vscode-languageclient带来的依赖错误
