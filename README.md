@@ -36,8 +36,6 @@ CN:
 
 4. 插件性能能够满足单文件几万行的lua代码的格式化快速响应
 
-5. auto import功能默认开启，配置文档参考https://github.com/CppCXY/EmmyLuaCodeStyle
-
 EN:
 
 1. The shortcut to range formatting is ctrl-k-f, and after supporting range formatting, you can format the paste code supported by editor.formatOnPaste.
@@ -48,7 +46,6 @@ EN:
 
 4. The plug-in performance can meet the rapid response within 100000 lines of a single file
 
-5. The auto import is enabled by default. For the configuration document, please refer to https://github.com/CppCXY/EmmyLuaCodeStyle
 
 ## 配置(Configure)
 
