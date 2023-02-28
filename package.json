@@ -12,7 +12,7 @@
 		"lua codestyle",
 		"lua spell"
 	],
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
