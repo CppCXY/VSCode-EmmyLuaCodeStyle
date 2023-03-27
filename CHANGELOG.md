@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.11
+
+`FIX` 修复许多BUG 
+
+
+`NEW` 重新支持`---@format disable` 和 `---@format disable-next`
+
 ## 1.0.9
 
 `FIX` 修复缩进检查的一些BUG
