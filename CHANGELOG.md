@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.1
+
+`NEW` 优化type format
+
+`FIX` type format 不会清理`---@format disable` 和`---@format disable-next`之下的内容了
+
 ## 1.1.0
 
 `FIX` 修复许多BUG 
