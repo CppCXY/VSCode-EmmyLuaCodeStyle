@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.2
+
+`NEW` 新选项 `align_continuous_line_space`
+
+`NEW` 还有其他更新, 但是我忘了
+
 ## 1.1.1
 
 `NEW` 优化type format
