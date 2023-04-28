@@ -66,16 +66,15 @@ function registerCustomCommands(context: vscode.ExtensionContext) {
 async function startServer() {
 	const editorConfigFiles = await editorConfigWatcher.watch();
 	// const moduleConfigFiles = await moduleConfigWatcher.watch();
-	const config = vscode.workspace.getConfiguration();
 	let dictionaryPath = [
 		path.join(saveContext.extensionPath, "dictionary", "dictionary.txt").toString(),
 		path.join(saveContext.extensionPath, "dictionary", "lua_dict.txt").toString()
 	]
-	
+
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [{ scheme: 'file', language: LANGUAGE_ID }],
 		synchronize: {
-			configurationSection: ["emmylua", "files.associations"],
+			configurationSection: ["emmylua.lint", "emmylua.spell", "emmylua.name", "files.associations"],
 			fileEvents: [
 				vscode.workspace.createFileSystemWatcher("**/*.lua")
 			]
@@ -85,11 +84,6 @@ async function startServer() {
 			client: 'vsc',
 			editorConfigFiles,
 			localeRoot: path.join(saveContext.extensionPath, "locale").toString(),
-			vscodeConfig: {
-				"emmylua.lint.codeStyle": config.get<boolean>("emmylua.lint.codeStyle"),
-				"emmylua.spell.enable": config.get<boolean>("emmylua.spell.enable"),
-				"emmylua.spell.dict": config.get<any>("emmylua.spell.dict")
-			},
 			dictionaryPath
 			// extensionChars: "@$"
 		}

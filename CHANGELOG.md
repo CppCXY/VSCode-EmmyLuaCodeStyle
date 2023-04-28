@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.1.3
+
+`NEW` 功能 `命名风格检查` 正式支持配置.
+
+`CHANGE` `local empty = function() end` 格式化时不会再换行
+
+`NEW` 支持形如 `local d; Init()` 的排版方式
+
+`NEW` 支持链式表达式对齐
+
 ## 1.1.2
 
 `NEW` 新选项 `align_continuous_line_space`
