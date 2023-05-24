@@ -69,6 +69,16 @@ EN:
 
 First create a .editorconfig file and then enter Ctrl + shift + p to open the command window and enter insert luaCodeStyle template
 
+## Support
+
+CN:
+
+有任何问题可以去仓库的issue里面讨论, 我一般会在半天之内回答.
+
+EN:
+
+If you have any questions, you can go to the issue of the repository to discuss, and I will usually answer within half a day.
+
 ## Road Map
 
 - support plugin[0%]
