@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.1.5
+
+`NEW` 支持通过设置选项 `align_continuous_similar_call_args=true` 对齐相似函数的参数列表
+
 ## 1.1.4
 
 `FIX` 修复拼写检查在字符串中少一位的BUG
