@@ -1,5 +1,15 @@
 # Change Log
 
+# 1.2.0
+
+`NEW` 支持选项`break_before_braces`
+
+`NEW` 支持设置`table_separator_style`
+
+`NEW` 命令行工具支持范围格式化
+
+`NEW` 支持了intellij平台, Intellij-EmmyLua的用户在2023.1以上的IDE可以安装本插件
+
 # 1.1.5
 
 `NEW` 支持通过设置选项 `align_continuous_similar_call_args=true` 对齐相似函数的参数列表

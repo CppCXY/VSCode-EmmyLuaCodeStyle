@@ -87,7 +87,7 @@ If you have any questions, you can go to the issue of the repository to discuss,
 
 CN:
 
-1. `Intellij-EmmyLua`在开发分支中已由我实现，其他编辑器平台如果希望获得支持可以提出相关issue。
+1. 插件 `Intellij-EmmyLuaCodeStyle` 支持intellij 
 2. `sumneko_lua`已经集成该插件的格式化/代码诊断算法
 
 EN:
