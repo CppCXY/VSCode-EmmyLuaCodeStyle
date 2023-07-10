@@ -1,5 +1,14 @@
 # Change Log
 
+[English Change Log](CHANGELOG_EN.md)
+
+# 1.2.2
+
+`FIX` 当前行存在unicode字符时,放弃对齐行为
+
+`NEW` 支持非标准符号, 但是本插件没有导出接口, 如果有必要请提出issue
+
+
 # 1.2.0
 
 `NEW` 支持选项`break_before_braces`
