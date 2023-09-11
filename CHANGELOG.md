@@ -2,6 +2,12 @@
 
 [English Change Log](CHANGELOG_EN.md)
 
+# 1.3.2
+
+`CHG` 迁移选项`end_statement_with_semicolon`的`never`到`replace_with_newline`
+
+`NEW` 新增选项`space_around_logical_operator`和`space_around_assign_operator`
+
 # 1.3.1
 
 `FIX` 修复了`space_before_inline_comment=2`对大括号之后的注释不起作用的BUG
