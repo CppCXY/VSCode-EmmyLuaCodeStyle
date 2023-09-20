@@ -73,10 +73,12 @@ space_after_comma = true
 
 space_after_comma_in_for_statement = true
 
+# true/false or none/always/no_space_asym
 space_around_concat_operator = true
 
 space_around_logical_operator = true
 
+# true/false or none/always/no_space_asym
 space_around_assign_operator = true
 
 # [align]
@@ -147,5 +149,5 @@ break_before_braces = false
 ignore_space_after_colon = false
 
 remove_call_expression_list_finish_comma = false
-# keep / always / same_line / replace_with_newline
+# keep / always / same_line / repalce_with_newline
 end_statement_with_semicolon = keep

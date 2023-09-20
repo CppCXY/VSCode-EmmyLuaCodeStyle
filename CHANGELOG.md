@@ -2,6 +2,13 @@
 
 [English Change Log](CHANGELOG_EN.md)
 
+## 1.3.3
+
+`FIX` 修复了`space_around_concat_operator`和`space_around_assign_operator`在左侧为数字或者'>'时会导致语法错误
+
+`NEW` 新增选项`space_around_concat_operator`和`space_around_assign_operator`的可选值范围, 其可选的值范围是:
+none/always/no_space_asym
+
 # 1.3.2
 
 `CHG` 迁移选项`end_statement_with_semicolon`的`never`到`replace_with_newline`

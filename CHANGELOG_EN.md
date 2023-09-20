@@ -1,5 +1,17 @@
 # Change Log
 
+# 1.3.3
+
+`FIX` has fixed the syntax error caused by `space_around_concat_operator` and `space_around_assign_operator` when they are on the left side of a number or '>'. 
+
+`NEW` has added optional value ranges for `space_around_concat_operator` and `space_around_assign_operator`. The available values include none/always/no_space_asym.
+
+# 1.3.2
+
+`CHG` migration option `never` to `replace_with_newline` for `end_statement_with_semicolon`
+
+`NEW` Added options `space_around_logical_operator` and `space_around_assign_operator`
+
 # 1.3.1
 
 `FIX` Fixed a bug where `space_before_inline_comment=2` did not work for comments after curly braces.
