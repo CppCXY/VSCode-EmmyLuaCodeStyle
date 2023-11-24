@@ -1,6 +1,11 @@
 # Change Log
 
-[English Change Log](CHANGELOG_EN.md)
+[English Change Log](./CHANGELOG_EN.md)
+
+## 1.4.0
+
+`NEW` 重构了CodeFormat命令行工具, 可以检查时导出json格式
+
 
 ## 1.3.4
 
@@ -17,13 +22,13 @@
 `NEW` 新增选项`space_around_concat_operator`和`space_around_assign_operator`的可选值范围, 其可选的值范围是:
 none/always/no_space_asym
 
-# 1.3.2
+## 1.3.2
 
 `CHG` 迁移选项`end_statement_with_semicolon`的`never`到`replace_with_newline`
 
 `NEW` 新增选项`space_around_logical_operator`和`space_around_assign_operator`
 
-# 1.3.1
+## 1.3.1
 
 `FIX` 修复了`space_before_inline_comment=2`对大括号之后的注释不起作用的BUG
 
@@ -31,7 +36,7 @@ none/always/no_space_asym
 `keep`, `max(n)`, `min(n)`, `fixed(n)`, 该选项无法作用于最外层的代码块.
 
 
-# 1.3.0
+## 1.3.0
 
 `REFACTOR` 重写了分词算法, 和相关的拼写检查
 
@@ -42,13 +47,13 @@ none/always/no_space_asym
 `NEW` 支持选项`keep_indents_on_empty_lines`, 这个选项主要是intellij平台通常会有默认的一个选项保持空行缩进, 感谢`@qq792453582`
 
 
-# 1.2.2
+## 1.2.2
 
 `FIX` 当前行存在unicode字符时,放弃对齐行为
 
 `NEW` 支持非标准符号
 
-# 1.2.0
+## 1.2.0
 
 `NEW` 支持选项`break_before_braces`
 
@@ -58,7 +63,7 @@ none/always/no_space_asym
 
 `NEW` 支持了intellij平台, Intellij-EmmyLua的用户在2023.1以上的IDE可以安装本插件
 
-# 1.1.5
+## 1.1.5
 
 `NEW` 支持通过设置选项 `align_continuous_similar_call_args=true` 对齐相似函数的参数列表
 

@@ -1,6 +1,6 @@
 # EmmyLuaCodeStyle
 
-[中文版](README_CN.md)
+[中文版](./README_CN.md)
 
 EmmyLuaCodeStyle is a C++ based Lua code formatting plugin that supports Lua 5.1, 5.2, 5.3, 5.4, and LuaJIT. It provides the following features:
 

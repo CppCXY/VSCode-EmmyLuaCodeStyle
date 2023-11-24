@@ -1,29 +1,39 @@
 # Change Log
 
-[中文文档](CHANGELOG_CN.md)
+[中文文档](./CHANGELOG_CN.md)
 
-# 1.3.4
+## 1.4.0
+
+`NEW` Refactored the CodeFormat command-line tool to export results in JSON format when performing checks.
+
+## 1.3.4
+
+`NEW` Added support for UTF8-Latin1 characters in formatted alignment.
+
+`NEW` Reintroduced support for `never` in `end_statement_with_semicolon`, but semicolons within the same line and semicolons that may cause ambiguity are not handled.
+
+`NEW` Naming style check now supports `AAA_1` in addition to snake_case.
 
 
-# 1.3.3
+## 1.3.3
 
 `FIX` has fixed the syntax error caused by `space_around_concat_operator` and `space_around_assign_operator` when they are on the left side of a number or '>'. 
 
 `NEW` has added optional value ranges for `space_around_concat_operator` and `space_around_assign_operator`. The available values include none/always/no_space_asym.
 
-# 1.3.2
+## 1.3.2
 
 `CHG` migration option `never` to `replace_with_newline` for `end_statement_with_semicolon`
 
 `NEW` Added options `space_around_logical_operator` and `space_around_assign_operator`
 
-# 1.3.1
+## 1.3.1
 
 `FIX` Fixed a bug where `space_before_inline_comment=2` did not work for comments after curly braces.
 
 `NEW` Added the option `line_space_around_block` to specify the number of blank lines to keep before and after a code block. The default value is `fixed(1)`, which means no blank lines are kept before or after the code block. The possible values are `keep`, `max(n)`, `min(n)`, and `fixed(n)`. Note that this option does not apply to the outermost level of code blocks.
 
-# 1.3.0
+## 1.3.0
 
 `REFACTOR` rewrote the tokenization algorithm and related spell-checking.
 
@@ -33,13 +43,13 @@
 
 `NEW` added support for the option `keep_indents_on_empty_lines`. This option is mainly for IntelliJ platform, which usually has a default option to keep indentation on empty lines. Thanks to `@qq792453582`.
 
-# 1.2.2
+## 1.2.2
 
 `FIX` abandon alignment behavior when there are Unicode characters in the current line.
 
 `NEW` support non-standard symbols.
 
-# 1.2.0
+## 1.2.0
 
 `NEW` support option `break_before_braces`
 
@@ -49,7 +59,7 @@
 
 `NEW` supports the intellij platform, Intellij-EmmyLua users can install this plugin in IDEs above 2023.1
 
-# 1.1.5
+## 1.1.5
 
 `NEW` supports aligning the argument lists of similar functions by setting the option `align_continuous_similar_call_args=true`
 
