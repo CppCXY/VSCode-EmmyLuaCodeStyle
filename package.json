@@ -12,13 +12,13 @@
 		"lua codestyle",
 		"lua spell"
 	],
-	"version": "1.4.0",
+	"version": "1.4.2",
 	"author": "CppCXY",
 	"publisher": "CppCXY",
 	"engines": {
 		"vscode": "^1.75.1"
 	},
-	"repository": "https://github.com/CppCXY/EmmyLuaCodeStyle",
+	"repository": "https://github.com/CppCXY/VSCode-EmmyLuaCodeStyle",
 	"categories": [
 		"Programming Languages",
 		"Formatters",

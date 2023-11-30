@@ -2,6 +2,11 @@
 
 [English Change Log](./CHANGELOG_EN.md)
 
+## 1.4.2
+
+`FIX` 修复范围格式化在格式化纯空行的时候引发的错误
+
+
 ## 1.4.0
 
 `NEW` 重构了CodeFormat命令行工具, 可以检查时导出json格式

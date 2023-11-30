@@ -2,6 +2,10 @@
 
 [中文文档](./CHANGELOG_CN.md)
 
+## 1.4.2
+
+`FIX` Fix error thrown by range formatting when formatting plain blank lines
+
 ## 1.4.0
 
 `NEW` Refactored the CodeFormat command-line tool to export results in JSON format when performing checks.
