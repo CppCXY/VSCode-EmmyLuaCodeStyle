@@ -13,6 +13,10 @@ tab_width = 4
 quote_style = none
 
 continuation_indent = 4
+## extend option
+# continuation_indent.before_block = 4
+# continuation_indent.in_expr = 4
+# continuation_indent.in_table = 4
 
 # this mean utf8 length , if this is 'unset' then the line width is no longer checked
 # this option decides when to chopdown the code
@@ -50,6 +54,11 @@ space_before_closure_open_parenthesis = true
 # optional always/only_string/only_table/none
 # or true/false
 space_before_function_call_single_arg = always
+## extend option
+## always/keep/none
+# space_before_function_call_single_arg.table = always
+## always/keep/none
+# space_before_function_call_single_arg.string = always
 
 space_before_open_square_bracket = false
 
@@ -64,6 +73,7 @@ space_around_table_append_operator = false
 
 ignore_spaces_inside_function_call = false
 
+# detail number or 'keep'
 space_before_inline_comment = 1
 
 # [operator space]
@@ -145,6 +155,7 @@ break_all_list_when_line_exceed = false
 auto_collapse_lines = false
 
 break_before_braces = false
+
 # [preference]
 ignore_space_after_colon = false
 

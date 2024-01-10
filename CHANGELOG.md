@@ -2,6 +2,18 @@
 
 [中文文档](./CHANGELOG_CN.md)
 
+## 1.4.3
+
+`NEW` Support for a new family of options that can subdivide continuation_indent.
+* continuation_indent.before_block
+* continuation_indent.in_expr
+* continuation_indent.in_table
+
+`NEW` Support for a new family of options to subdivide the indent: * space_before_function_indent.
+* space_before_function_call_single_arg.table 
+* space_before_function_call_single_arg.string
+its options are always/keep/none.
+
 ## 1.4.2
 
 `FIX` Fix error thrown by range formatting when formatting plain blank lines

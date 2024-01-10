@@ -2,6 +2,18 @@
 
 [English Change Log](./CHANGELOG_EN.md)
 
+## 1.4.3
+
+`NEW` 支持新的选项系列可以细分continuation_indent:
+* continuation_indent.before_block
+* continuation_indent.in_expr
+* continuation_indent.in_table
+
+`NEW` 支持新的选项系列可以细分indent:
+* space_before_function_call_single_arg.table 
+* space_before_function_call_single_arg.string
+他的可选值为always/keep/none
+
 ## 1.4.2
 
 `FIX` 修复范围格式化在格式化纯空行的时候引发的错误
