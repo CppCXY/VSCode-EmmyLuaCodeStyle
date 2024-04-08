@@ -2,6 +2,13 @@
 
 [中文文档](./CHANGELOG_CN.md)
 
+## 1.5.2
+
+`NEW` Added option `space_after_comment_dash` allows setting at least one space between all short comments and '--'
+
+`NEW` `align_continuous_line_space` affects the alignment of inline comments
+
+
 ## 1.5.1
 
 `NEW` Refactored the logic for reading and parsing the editorconfig file, converting strings to wide strings on Windows to support UTF8 paths.

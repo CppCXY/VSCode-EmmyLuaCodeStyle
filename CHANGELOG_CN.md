@@ -2,6 +2,13 @@
 
 [English Change Log](./CHANGELOG_EN.md)
 
+## 1.5.2
+
+`NEW` 新增选项`space_after_comment_dash`允许设置所有短注释和'--'之间至少一个空格
+
+`NEW` `align_continuous_line_space`影响内联注释对齐
+
+
 ## 1.5.1
 
 `NEW` 重构了editorconfig文件的读取和解析逻辑, 在windows上会把string转化为宽字符串, 以支持utf8路径
