@@ -2,6 +2,12 @@
 
 [English Change Log](./CHANGELOG_EN.md)
 
+## 1.5.4
+
+`NEW` 支持设置`call_arg_parentheses = always`
+
+`NEW` 长注释之后的短注释不会换行
+
 ## 1.5.2
 
 `NEW` 新增选项`space_after_comment_dash`允许设置所有短注释和'--'之间至少一个空格

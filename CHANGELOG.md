@@ -2,6 +2,12 @@
 
 [中文文档](./CHANGELOG_CN.md)
 
+## 1.5.4
+
+`NEW` Support for setting `call_arg_parentheses = always`
+
+`NEW` Short comments after long comments will not wrap to the next line
+
 ## 1.5.2
 
 `NEW` Added option `space_after_comment_dash` allows setting at least one space between all short comments and '--'
