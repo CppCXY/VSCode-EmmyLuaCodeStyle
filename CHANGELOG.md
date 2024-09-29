@@ -2,6 +2,12 @@
 
 [中文文档](./CHANGELOG_CN.md)
 
+## 1.5.6
+
+`FIX` Fixed some bugs
+
+`NEW` `call_arg_parentheses` supports `always`
+
 ## 1.5.2
 
 `NEW` Added option `space_after_comment_dash` allows setting at least one space between all short comments and '--'

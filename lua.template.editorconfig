@@ -32,7 +32,7 @@ table_separator_style = none
 #optional keep/never/always/smart
 trailing_table_separator = keep
 
-# keep/remove/remove_table_only/remove_string_only
+# keep/remove/remove_table_only/remove_string_only/always
 call_arg_parentheses = keep
 
 detect_end_of_line = false
