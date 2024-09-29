@@ -6,7 +6,11 @@
 
 `FIX` Fixed some bugs
 
-`NEW` `call_arg_parentheses` supports `always`
+## 1.5.4
+
+`NEW` Support for setting `call_arg_parentheses = always`
+
+`NEW` Short comments after long comments will not wrap to the next line
 
 ## 1.5.2
 

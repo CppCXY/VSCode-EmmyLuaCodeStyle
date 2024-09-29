@@ -7,7 +7,11 @@
 
 `FIX` 修复一些BUG
 
-`NEW` `call_arg_parentheses`支持`always`
+## 1.5.4
+
+`NEW` 支持设置`call_arg_parentheses = always`
+
+`NEW` 长注释之后的短注释不会换行
 
 ## 1.5.2
 
