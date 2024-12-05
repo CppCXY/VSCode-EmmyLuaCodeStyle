@@ -17,7 +17,7 @@ EmmyLuaCodeStyle 是一个基于 C++ 的 Lua 代码格式化插件，支持 Lua 
 
 ### 配置
 
-EmmyLuaCodeStyle 支持通过 `.editorconfig` 文件进行项目配置。`.editorconfig` 文件必须位于项目根目录中。如果您希望同一项目下的不同目录使用不同的配置，可以在不同的目录中添加 `.editorconfig` 文件。或者如果您希望当前目录中的不同文件使用不同的配置，可以根据 editorconfig 支持的方式配置不同的文件。有关配置文档，请参阅 https://github.com/CppCXY/EmmyLuaCodeStyle。
+EmmyLuaCodeStyle 支持通过 `.editorconfig` 文件进行项目配置。`.editorconfig` 文件必须位于项目根目录中。如果您希望同一项目下的不同目录使用不同的配置，可以在不同的目录中添加 `.editorconfig` 文件。或者如果您希望当前目录中的不同文件使用不同的配置，可以根据 editorconfig 支持的方式配置不同的文件。有关配置文档，请参阅 https://github.com/CppCXY/EmmyLuaCodeStyle 。
 
 ### 创建模板配置
 
